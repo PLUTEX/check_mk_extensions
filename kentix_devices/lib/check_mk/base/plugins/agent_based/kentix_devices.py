@@ -93,7 +93,7 @@ def parse_kentix_devices(string_table):
             for subline in string_table[key]:
                 if subline[0] == sid:
                     sensor[val] = subline
-        section['sensors']["%s %s" % (line[1], sid)] = sensor
+        section['sensors']["%s" % line[1]] = sensor
     return section
 
 register.snmp_section(
